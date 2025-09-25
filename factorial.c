@@ -1,13 +1,15 @@
-#include<stdio.h>
-int main()
-{
-    int a,i=1,f=1;
-    printf("Enter value:");
-    scanf("%d",&a);
-    while(i<=a)
-    {f=f*i;
-    i++;
+#include <stdio.h>
+int factorial(int n) {
+if (n == 0 || n == 1)    
+return 1;
+else
+return n * factorial(n - 1);  
 }
-printf("The factorial of the %d is:%d",a,f);
+int main() {
+int num;
+printf("Enter a number: ");
+scanf("%d", &num);
+if (num > 0)
+printf("Factorial of %d is: %d\n", num, factorial(num));
 return 0;
 }
